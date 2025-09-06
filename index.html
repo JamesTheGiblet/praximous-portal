@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Sovereignty Project - Tools for a Decentralized Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+<!-- Updated Navigation Section with Dark Mode Toggle -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">Digital Sovereignty</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tools
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+                        <li><a class="dropdown-item" href="https://jamesthegiblet.github.io/interactive-readme-generator/" target="_blank" rel="noopener noreferrer">Interactive README</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item disabled" href="#">Decentralized ID Manager (Soon)</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Secure Storage Vault (Soon)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cli">CLI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#analytics">Analytics</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <button type="button" class="theme-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary me-2" onclick="showPricing()" title="View Pricing">Pricing</button>
+                <a href="https://jamesthegiblet.github.io/interactive-readme-generator/" class="btn btn-primary" role="button" title="Get Started" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home" class="hero-section text-center py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-4">Empowering Your Digital Sovereignty</h1>
+                <p class="lead mb-4">A suite of open-source tools designed to give you control over your data, privacy, and digital identity. Join us in building a more decentralized and secure internet.</p>
+                <a class="btn btn-primary btn-lg me-2" href="https://jamesthegiblet.github.io/interactive-readme-generator/" role="button" target="_blank" rel="noopener noreferrer">Try the README Generator</a>
+                <a class="btn btn-outline-secondary btn-lg" href="#features" role="button">Discover Our Mission</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-5 bg-light scroll-fade">
+        <div class="container">
+            <h2 class="section-title">Our Tools</h2>
+            <p class="lead text-center mb-5">A suite of open-source tools to empower your digital independence.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 d-flex flex-column">
+                        <div class="feature-icon"><i class="bi bi-file-earmark-text"></i></div>
+                        <h3>AI README Generator</h3>
+                        <p class="flex-grow-1">Create professional README files for your projects in minutes. Supports GitHub repo analysis and AI-powered content suggestions.</p>
+                        <a href="https://jamesthegiblet.github.io/interactive-readme-generator/" class="btn btn-primary mt-auto align-self-start" target="_blank" rel="noopener noreferrer">Launch Generator <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 d-flex flex-column">
+                        <div class="feature-icon"><i class="bi bi-person-badge"></i></div>
+                        <h3>DID Manager</h3>
+                        <p class="flex-grow-1">Create and manage your decentralized identity. Take control of your digital self without relying on centralized providers.</p>
+                        <a href="#" class="btn btn-secondary mt-auto align-self-start disabled">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 d-flex flex-column">
+                        <div class="feature-icon"><i class="bi bi-safe"></i></div>
+                        <h3>Storage Vault</h3>
+                        <p class="flex-grow-1">Securely store your sensitive data with end-to-end encryption in a decentralized storage vault. Your keys, your data.</p>
+                        <a href="#" class="btn btn-secondary mt-auto align-self-start disabled">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="section-title scroll-fade">Our Core Principles</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-key-fill"></i>
+                        </div>
+                        <h3>Data Ownership</h3>
+                        <p>You control your data. Our tools are built on principles of data minimization and local-first storage. No tracking, no selling.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-diagram-3-fill"></i>
+                        </div>
+                        <h3>Decentralization</h3>
+                        <p>We leverage decentralized technologies to reduce reliance on single points of failure and control. Your identity, your keys.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h3>Open Source</h3>
+                        <p>All our tools are open-source. We believe in transparency and community collaboration to build trustworthy software.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <h3>Privacy by Design</h3>
+                        <p>Privacy isn't an afterthought; it's a core feature. We use end-to-end encryption and privacy-preserving techniques.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-plug-fill"></i>
+                        </div>
+                        <h3>Interoperability</h3>
+                        <p>Our tools are designed to work together and with other open standards, avoiding vendor lock-in and promoting a healthy ecosystem.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 scroll-fade">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-person-check-fill"></i>
+                        </div>
+                        <h3>User Empowerment</h3>
+                        <p>We provide you with the tools and knowledge to navigate the digital world securely and independently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLI Demo Section -->
+    <section id="cli" class="py-5 bg-light scroll-fade">
+        <div class="container">
+            <h2 class="section-title">The Sovereignty CLI</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="cli-demo">
+                        <div class="mb-3"><span class="cli-prompt">$</span> <span class="cli-command">npm install -g dso-cli</span></div>
+                        <div class="mb-3"><span class="cli-prompt">$</span> <span class="cli-command">cd my-project</span></div>
+                        <div class="mb-3"><span class="cli-prompt">$</span> <span class="cli-command">dso generate readme --ai</span></div>
+                        <div class="mb-3"><span class="cli-comment"># ✓ README.md generated and updated.</span></div>
+                        <div class="mb-3"><span class="cli-prompt">$</span> <span class="cli-command">dso identity create --name "My Web3 ID"</span></div>
+                        <div class="mb-3"><span class="cli-comment"># ✓ Decentralized identity created and secured.</span></div>
+                        <div class="mb-3"><span class="cli-prompt">$</span> <span class="cli-command">dso deploy --service my-dapp</span></div>
+                        <div><span class="cli-prompt">$</span> <span class="cli-comment"># ✓ Service deployed to decentralized network.</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Control From Your Terminal</h3>
+                    <p>The Sovereignty CLI (dso-cli) brings the power of digital self-ownership directly into your development workflow.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Manage decentralized identities and credentials.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Automate documentation with the AI README tool.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Deploy applications to decentralized hosting platforms.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="bi bi-check-circle-fill text-success me-2"></i> Script and automate complex sovereignty workflows.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="py-5 scroll-fade">
+        <div class="container">
+            <h2 class="section-title">Our Impact & Growth</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="analytics-card">
+                        <div class="analytics-number" id="totalGenerated">1,200+</div>
+                        <h5>Active Contributors</h5>
+                        <p class="text-muted mb-0">Building the future</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="analytics-card">
+                        <div class="analytics-number" id="hoursSaved">5,000+</div>
+                        <h5>Decentralized Nodes</h5>
+                        <p class="text-muted mb-0">In our network</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="analytics-card">
+                        <div class="analytics-number" id="repoCoverage">10k+</div>
+                        <h5>Projects Secured</h5>
+                        <p class="text-muted mb-0">Using our tools</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="analytics-card">
+                        <div class="analytics-number" id="developerSatisfaction">4.9/5</div>
+                        <h5>Community Rating</h5>
+                        <p class="text-muted mb-0">On GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 The Digital Sovereignty Project. All Rights Reserved.</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="privacy.html" target="_blank" rel="noopener noreferrer" class="text-white-50">Privacy</a></li>
+                <li class="list-inline-item"><a href="terms.html" target="_blank" rel="noopener noreferrer" class="text-white-50">Terms</a></li>
+                <li class="list-inline-item"><a href="https://jamesthegiblet.github.io/Project-Flux-MVP-Ready/" target="_blank" rel="noopener noreferrer" class="text-white-50">Project Flux</a></li>
+                <li class="list-inline-item"><a href="contact.html" target="_blank" rel="noopener noreferrer" class="text-white-50">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="backToTopBtn" class="back-to-top-btn" title="Go to top" aria-label="Go to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

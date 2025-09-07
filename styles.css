@@ -106,23 +106,19 @@ body {
     justify-content: center;
     color: var(--text-primary);
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-right: 10px;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .theme-toggle:hover {
     border-color: var(--primary);
     color: var(--primary);
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(15deg);
 }
 
 .theme-toggle i {
     font-size: 1.1rem;
     transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover i {
-    transform: rotate(15deg);
 }
 
 /* Button styling */
@@ -131,7 +127,7 @@ body {
     border-color: var(--primary);
     padding: 10px 20px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -145,7 +141,7 @@ body {
     border-color: var(--primary);
     font-weight: 600;
     background-color: transparent;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-outline-primary:hover {
@@ -158,7 +154,7 @@ body {
     color: var(--text-secondary);
     border-color: var(--border-color);
     background-color: transparent;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-outline-secondary:hover {
@@ -168,22 +164,22 @@ body {
 }
 
 /* Hero section */
-.hero {
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
     padding: 100px 0;
     border-radius: 0 0 30px 30px;
     margin-bottom: 80px;
     transition: background 0.3s ease;
 }
 
-.hero h1 {
+.hero-section h1 {
     font-weight: 800;
     font-size: 3.5rem;
     margin-bottom: 20px;
     color: var(--text-primary);
 }
 
-.hero p {
+.hero-section p {
     font-size: 1.25rem;
     color: var(--text-secondary);
     margin-bottom: 30px;
@@ -204,9 +200,9 @@ body {
     border: 1px solid var(--border-color);
     background-color: var(--card-bg);
     box-shadow: 0 10px 30px var(--shadow-light);
-    transition: all 0.3s ease;
     height: 100%;
     padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .feature-card:hover {
@@ -246,7 +242,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 20px 60px var(--shadow-medium);
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Form styling */
@@ -254,7 +250,7 @@ body {
     background-color: var(--input-bg);
     border: 1px solid var(--input-border);
     color: var(--text-primary);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .form-control:focus {
@@ -272,7 +268,7 @@ body {
     background-color: var(--input-bg);
     border: 1px solid var(--input-border);
     color: var(--text-primary);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .form-select:focus {
@@ -368,7 +364,7 @@ body {
     max-height: 600px;
     overflow-y: auto;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .preview-container h1,
@@ -401,7 +397,7 @@ body {
     box-shadow: 0 10px 30px var(--shadow-light);
     text-align: center;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .analytics-card:hover {
@@ -434,7 +430,7 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .cli-prompt {
@@ -450,8 +446,8 @@ body {
 }
 
 /* Background sections */
-.py-5.bg-light {
-    background-color: var(--bg-secondary) !important;
+.section-alt {
+    background-color: var(--bg-secondary);
     transition: background-color 0.3s ease;
 }
 
@@ -473,11 +469,18 @@ body {
 footer {
     background-color: var(--bg-tertiary) !important;
     color: var(--text-primary);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-footer .text-white-50 {
-    color: var(--text-secondary) !important;
+footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }
 
 /* List styling */
@@ -503,7 +506,7 @@ footer .text-white-50 {
     max-height: 400px;
     border-radius: 15px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
 /* Interface Mockup Styling */
@@ -515,7 +518,7 @@ footer .text-white-50 {
     box-shadow: 0 10px 30px var(--shadow-light);
     max-width: 500px;
     margin: 0 auto;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mockup-header {
@@ -570,7 +573,7 @@ footer .text-white-50 {
     border-radius: 6px;
     color: var(--text-primary);
     font-size: 0.85rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mockup-input:focus,
@@ -607,8 +610,8 @@ footer .text-white-50 {
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .mockup-button:hover {
@@ -649,8 +652,8 @@ footer .text-white-50 {
     height: 12px;
     border-radius: 50%;
     margin: 0 4px;
-    background: var(--bg-tertiary);
-    transition: all 0.3s ease;
+    background-color: var(--bg-tertiary);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .mockup-step.active {

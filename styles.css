@@ -57,6 +57,10 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Navbar styling */
 .navbar {
     background-color: var(--navbar-bg);
@@ -192,6 +196,10 @@ body {
     margin-bottom: 40px;
     text-align: center;
     color: var(--text-primary);
+}
+
+section[id] {
+    scroll-margin-top: 80px; /* Offset for sticky navbar */
 }
 
 /* Feature cards */

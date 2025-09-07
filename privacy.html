@@ -9,12 +9,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Simple Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Digital Sovereignty</a>
+<!-- Updated Navigation Section with Dark Mode Toggle -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Digital Sovereignty</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tools
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+                        <li><a class="dropdown-item" href="https://jamesthegiblet.github.io/interactive-readme-generator/" target="_blank" rel="noopener noreferrer">Interactive README</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item disabled" href="#">Decentralized ID Manager (Soon)</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Secure Storage Vault (Soon)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#cli">CLI</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#analytics">Analytics</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <button type="button" class="theme-toggle" onclick="toggleDarkMode()" title="Toggle dark mode" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button type="button" class="btn btn-outline-primary me-2" onclick="showPricing()" title="View Pricing">Pricing</button>
+                <a href="https://jamesthegiblet.github.io/interactive-readme-generator/" class="btn btn-primary" role="button" title="Get Started" target="_blank" rel="noopener noreferrer">Get Started</a>
+            </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Main Content -->
     <main class="container py-5">
